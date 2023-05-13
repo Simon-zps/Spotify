@@ -1,0 +1,190 @@
+/// Main Styles File
+/// Here we import all the global Styles files we need for our project.
+
+@import "styles/normalize.scss";
+@import "styles/root.scss";
+@import "styles/fonts.scss";
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #121212;
+  font-size: 18px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+
+  &.img--cover {
+    object-fit: cover;
+  }
+}
+
+.song-preview-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #9296C4;
+  width: 100%;
+  height: 100%;
+  max-width: 413px;
+  max-height: 607px;
+  border-radius: 24px;
+  padding: 16px;
+  color: white;
+
+  .song-preview-card__image-container {
+    position: relative;
+    width: 100%;
+    height: 381px;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    border-radius: 16px;
+  }
+
+  .song-preview-card__content {
+    margin-top: 7px;
+    padding: 16px;
+  }
+
+  .song-preview-card__title {
+    font-size: 24px;
+    line-height: 1.4em;
+    font-weight: 700;
+  }
+
+  .song-preview-card__time{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .song-preview-card__time-icon-container{
+      width: 100%;
+      margin-right: 4px;
+    }
+  }
+
+  .song-preview-card__artist-and-time {
+    margin-top: 11px;
+    width: 100%;
+    font-weight: 400;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .song-preview-card__album-cover-and-info{
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+
+    position: absolute;
+    bottom: 30px;
+  }
+  .song-preview-card__album-info-container{
+    display: flex;
+    padding: 0px;
+    gap: 8px;
+
+    .song-preview-card__album-info-dot-spacer{
+      opacity: 0.5;
+    }
+  }
+  .song-preview-card__album-cover-container {
+    img{
+      max-width: 40px;
+      margin-right: 16px;
+    }
+  }
+  .line{
+    margin-top: 23px;
+    opacity: 0.5;
+  }
+  
+}
+
+@media screen and (max-width:700px) {
+  .song-preview-card {
+    max-width: 343px;
+    max-height: 537px;
+
+    .song-preview-card__image-container {
+      height: 311px;
+    }
+
+    .song-preview-card__title{
+      font-size: 1.3em;
+    }
+
+    .song-preview-card__album-info-container{
+      font-size: 0.8em;
+      gap: 5px;
+  
+    }
+  }
+}
+
+@media screen and (max-width:300px) {
+  .song-preview-card {
+    max-width: 343px;
+    max-height: 450px;
+
+    .song-preview-card__image-container {
+      height: 248px;
+    }
+
+    .song-preview-card__content {
+      margin-top: 10px;
+      padding: 10px;
+    }
+
+    .song-preview-card__title{
+      font-size: 1em;
+    }
+
+    .song-preview-card__artist{
+      font-size: 0.85em;
+    }
+
+    .song-preview-card__time{
+      font-size: 0.8em;
+    
+
+      .song-preview-card__time-icon-container{
+        width: 16px;
+        margin-top: 2.5px;
+      }
+    }
+
+    .song-preview-card__album-cover-container{
+      img{
+        max-width: 30px;
+        margin-right: 8px;
+      }
+    }
+
+    .song-preview-card__album-info-container{
+      font-size: 0.7em;
+      gap: 2px;
+    }
+
+    .song-preview-card__album-cover-and-info{
+      margin-bottom: 2px;
+    }
+
+    .line{
+      margin-top: 19px;
+      opacity: 0.5;
+    }
+  }
+}
+
