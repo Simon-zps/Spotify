@@ -1,12 +1,13 @@
 import Card from './pages/card/Card'
+import Featured from './pages/featured-page/Featured'
 
 function App() {
 
   return (
     <>
-      <Card />
+      <Featured />
     </>
   )
 }
 
-export default App
+export default App;
