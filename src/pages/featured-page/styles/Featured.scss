@@ -4,20 +4,18 @@
 }
 
 .featured-page_container{
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
     height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     .featured-page_content{
 
         width: 80%;
-        height: 75%;
-
 
         .songs-section{
-
+        
             display: flex;
             border: 1px solid #343434;
             border-radius: 32px;
@@ -90,10 +88,10 @@
                 .song-card_btns:hover{
                     background-color:  #53C95B;
                 }
-                
-                
+            
 
             }
+
         }
 
 
@@ -149,3 +147,96 @@
         }
     }
 }
+
+@media screen and (max-width: 1341px) {
+
+    .featured-page_container {
+        align-items: flex-start;
+        height: auto;
+
+        .featured-page_content{
+            margin-top: 50px;
+
+            .songs-section {
+                flex-direction: column;
+                padding: 8px 30px;
+
+                .song-card {
+                    width: 100%;
+                    min-height: 250px;
+                    margin: 16px 0;
+                    display: flex;
+                    align-items: flex-start;
+
+                    .song-card_text{
+                        margin-left: 30px;
+                        
+                        width: 100%;
+
+                        .song-card_description{
+                            max-width: 400px;
+                        }
+                    }
+
+                    .song-card_btns {
+                        
+                        width: 25%;
+                    }
+
+                }
+            }
+
+            .ad-section {
+                margin-bottom: 50px;
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .featured-page_container {
+
+        .featured-page_content {
+
+            .songs-section {
+
+                .song-card {
+                    flex-direction: column; // Stack elements vertically.
+                    align-items: flex-start; // Align items to the left.
+                    width: 100%;
+                    min-height: 430px;
+                    margin: 16px 0;
+
+                    .song-card_text {
+                        margin-left: 0; // Adjust margin if needed.
+                        width: 100%;
+
+                        .song-card_description {
+                            max-width: 400px;
+                        }
+                    }
+
+                    .song-card_btns {
+                        width: 60%; // Adjust width if needed.
+                    }
+                }
+            }
+
+            .ad-section {
+                margin-bottom: 50px;
+
+                .ad-section_img{
+                    display: block;
+
+                    .ad-section_img_title {
+                        width: 100%;
+                        margin-bottom: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+

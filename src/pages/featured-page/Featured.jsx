@@ -29,17 +29,20 @@ function Featured() {
                     return(
                         <div className="song-card" key={index}>
                             <div className="song-card_img"><img src={song.img} /></div>
-                            <h2 className="song-card_title">{song.title}</h2>
-                            <p className="song-card_description">{song.description}</p>
                             
-                            <div className="song-card_btns">
-                                <div className="song-card_img">
-                                    <img src="assets/images/playbtn.png" alt="play button" />
-                                </div>
+                            <div className="song-card_text">
+                                <h2 className="song-card_title">{song.title}</h2>
+                                <p className="song-card_description">{song.description}</p>
                                 
-                                <p>Start listening</p>
+                                
+                                <div className="song-card_btns">
+                                    <div className="song-card_img">
+                                        <img src="assets/images/playbtn.png" alt="play button" />
+                                    </div>
+                                    
+                                    <p>Start listening</p>
+                                </div>
                             </div>
-
                         </div>
                     )}
                 )}
