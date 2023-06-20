@@ -6,11 +6,11 @@ function App() {
 
   return (
     <>
-      <div className="up">
+      <div className="show">
         <Card />
       </div>
 
-      <div className="down">
+      <div className="show">
         <Featured />
       </div>
     </>
